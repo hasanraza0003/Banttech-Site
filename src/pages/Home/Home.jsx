@@ -7,6 +7,7 @@ import { Glance } from "./Glance";
 import {MakeIdea } from "./MakeIdea";
 import {Vision } from "./Vision";
 import {BlogSec } from "./BlogSec";
+import {Features } from "./Features";
 
 export const Home = () => {
   return (
@@ -19,6 +20,7 @@ export const Home = () => {
         <MakeIdea />
         <Vision />
         <BlogSec />
+        <Features />
     </div>
   );
 };

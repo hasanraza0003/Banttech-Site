@@ -5,20 +5,18 @@ import {
   FaHeart,
 } from "react-icons/fa";
 
-
 const Footer = () => {
-  
- 
-
   return (
     <footer className="relative bg-white px-72 overflow-hidden">
       {/* Weather and Location */}
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row md:justify-between items-start">
-
           <div className="text-[#EDEDED] ">
             <p className="text-8xl md:text-9xl ">
-              <span>It's 17:34 pm,</span> <br /> <span>clear sky &</span><br /><span>30°</span><br /> <span>in Bareilly</span>
+              <span>It's 17:34 pm,</span> <br /> <span>clear sky &</span>
+              <br />
+              <span>30°</span>
+              <br /> <span>in Bareilly</span>
             </p>
           </div>
 
@@ -100,11 +98,9 @@ const Footer = () => {
         </div>
       </div>
 
-  
-
       {/* Bottom Bar */}
       <div className="container mx-auto pt-40 mt-12 mb-20 ">
-        <div className="flex flex-col  md:flex-row justify-between items-center text-[.625rem] leading-[1.5px] text-[#ababab] font-semibold"> 
+        <div className="flex flex-col  md:flex-row justify-between items-center text-[.625rem] leading-[1.5px] text-[#ababab] font-semibold">
           <div className="flex items-center">
             <span>BANTTECH.COM, OPERATED WITH</span>
             <FaHeart className="mx-1 text-red-500" />
