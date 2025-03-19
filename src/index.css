@@ -14,11 +14,9 @@
     --color-b-1: #333333;
     --color-b-2: #212529;
     --color-w-1: #EEEEEE;
+    --color-w-2:#F9F9F9;
     --font-s: "BetterSaturday", sans-serif;
-}
-
-@layer utilities {
-  .font-betterSaturday {
-    font-family: var(--font-s);
   }
-}
+
+
+  /* bg-gradient-to-r from-[#feda75] via-[#fa7e1e] via-[#d62976] via-[#962fbf] to-[#4f5bd5] */

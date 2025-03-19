@@ -8,12 +8,12 @@ const qualities = [
   { title: "99", subtitile: "% satisfied customers." },
 ];
 
-export const Section_2 = () => {
+export const Creativity = () => {
   return (
     <div className="w-full h-full bg-secondary">
       {/* top sec  */}
       <div className="px-72 text-center">
-        <h2 className="text-4xl p-8">Creativity + Tech + Human Emotions</h2>
+        <h2 className="text-[42px] p-8 font-s text-b-1">Creativity + Tech + Human Emotions</h2>
         <p className="px-48 text-4xl">
           Because top-notch brands are crafted on multiple fronts. This rare
           combo means less shopping around for our clients and more ways to get
@@ -83,8 +83,8 @@ export const Section_2 = () => {
         </div>
 
         <ul className="flex justify-between items-center px-72 pb-20">
-          {qualities.map((prev) => (
-            <li>
+          {qualities.map((prev,idx) => (
+            <li key={idx}>
               <h2>{prev.title}</h2>
               <p>{prev.subtitile}</p>
             </li>
