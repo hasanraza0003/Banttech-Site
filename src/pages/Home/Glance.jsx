@@ -1,6 +1,46 @@
 import { FlipCard } from "../../components/FlipCard";
+import { useEffect, useState } from "react";
+import Lottie from "lottie-react";
 
 export const Glance = () => {
+  const [animations, setAnimations] = useState({
+    Budget: null,
+    Need: null,
+    Authority: null,
+    TimeLine: null,
+  });
+
+  useEffect(() => {
+    const fetchAnimations = async () => {
+      try {
+        const [budgetRes, needRes, authorityRes, timelineRes] = await Promise.all([
+          fetch("https://assets5.lottiefiles.com/packages/lf20_8gviyzwa.json"),
+          fetch("https://assets5.lottiefiles.com/private_files/lf30_9ncydozu.json"),
+          fetch("https://assets2.lottiefiles.com/packages/lf20_i3EMDH.json"),
+          fetch("https://assets10.lottiefiles.com/packages/lf20_asa4mlae.json"),
+        ]);
+
+        const [budgetData, needData, authorityData, timelineData] = await Promise.all([
+          budgetRes.json(),
+          needRes.json(),
+          authorityRes.json(),
+          timelineRes.json(),
+        ]);
+
+        setAnimations({
+          Budget: budgetData,
+          Need: needData,
+          Authority: authorityData,
+          TimeLine: timelineData,
+        });
+      } catch (error) {
+        console.error("Error loading Lottie animations:", error);
+      }
+    };
+
+    fetchAnimations();
+  }, []);
+
   return (
     <div className="h-full bg-w-2 pt-16 pb-20 px-72 flex flex-col md:flex-row justify-between items-center gap-44">
       {/* Left Section */}
@@ -26,7 +66,9 @@ export const Glance = () => {
             frontContent={{
               title: "Budget",
               text: "Digital Solutions that suit your pocket. We understand how COVID-19 has hit businesses' cash flow, and therefore we are committed to providing affordable business solutions for growing startups.",
-              icon: "💰",
+              icon: animations.Budget && (
+                <Lottie loop autoplay animationData={animations.Budget} className="w-40 p-8" />
+              ),
             }}
             backContent={{
               title: "More Info",
@@ -38,7 +80,9 @@ export const Glance = () => {
             frontContent={{
               title: "Need",
               text: "Customization is always challenging - and we love it. We work specifically based on the client's needs & deliver something that fulfills its purpose. After all, 'Need is the Mother of Creativity.'",
-              icon: "🎨",
+              icon: animations.Need && (
+                <Lottie loop autoplay animationData={animations.Need} className="w-40 p-8" />
+              ),
             }}
             backContent={{
               title: "More Info",
@@ -52,7 +96,9 @@ export const Glance = () => {
             frontContent={{
               title: "Authority",
               text: "You need a skilled team that delivers products that yield results. We have 80% of repeat customers which means we added exceptional value to their products when we developed and delivered the first time.",
-              icon: "🔰",
+              icon: animations.Authority && (
+                <Lottie loop autoplay animationData={animations.Authority} className="w-40 p-8" />
+              ),
             }}
             backContent={{
               title: "More Info",
@@ -63,7 +109,9 @@ export const Glance = () => {
             frontContent={{
               title: "Timeline",
               text: "Project Completed on time = Successful Project. We work hard to maintain the deadlines. Our team works with different adjustments to avoid unexpected delays.",
-              icon: "⏳",
+              icon: animations.TimeLine && (
+                <Lottie loop autoplay animationData={animations.TimeLine} className="w-40 p-8" />
+              ),
             }}
             backContent={{
               title: "More Info",

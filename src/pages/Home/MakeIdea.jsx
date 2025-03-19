@@ -3,12 +3,12 @@ import Lottie from "lottie-react";
 import { FaRightLong } from "react-icons/fa6";
 
 export const MakeIdea = () => {
-  const [animationData, setAnimationData] = useState(null);
+  const [IdeaAnime, setIdeaAnime] = useState(null);
 
   useEffect(() => {
     fetch("https://assets7.lottiefiles.com/packages/lf20_nco8im2c.json")
       .then((response) => response.json())
-      .then((data) => setAnimationData(data))
+      .then((data) => setIdeaAnime(data))
       .catch((error) => console.error("Error loading Lottie animation:", error));
   }, []);
 
@@ -39,7 +39,7 @@ export const MakeIdea = () => {
 
       {/* Right Side - Lottie Animation */}
       <div className="w-1/2">
-      {animationData && <Lottie loop autoplay animationData={animationData} className="w-full p-8" />}
+      {IdeaAnime && <Lottie loop autoplay animationData={IdeaAnime} className="w-full p-8" />}
       </div>
     </div>
   );
