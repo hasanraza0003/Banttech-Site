@@ -13,16 +13,18 @@ export const Creativity = () => {
     <div className="w-full h-full bg-secondary">
       {/* top sec  */}
       <div className="px-72 text-center">
-        <h2 className="text-[42px] p-8 font-s text-b-1">Creativity + Tech + Human Emotions</h2>
-        <p className="px-48 text-4xl">
-          Because top-notch brands are crafted on multiple fronts. This rare
-          combo means less shopping around for our clients and more ways to get
-          <span> creative </span> for us.
+        <h2 className="text-[42px] p-8 font-s text-b-1">
+          Creativity + Tech + Human Emotions
+        </h2>
+        <p className="text-4xl text-b-1 font-serif font-semibold">
+          <span>Because top-notch brands are crafted on multiple fronts.</span> <br />
+          <span>This rare combo means less shopping around for our</span><br /> <span>clients and more ways to get </span>
+          <span className="bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] text-transparent bg-clip-text">creative</span> for us.
         </p>
         <p className="m-8">
-          Get in touch with our team of experts at
-          <button> +91 8791162233</button> or send an email to
-          <button>poke@banttech.com</button>
+          Get in touch with our team of experts at 
+          <button className="mx-2 text-sm p-1 px-2 bg-b-1/90 text-white font-semibold rounded-md "> +91 8791162233</button> or send an email to
+          <button className="mx-2 text-sm p-1 px-2 bg-b-1/90 text-white font-semibold rounded-md uppercase "> poke@banttech.com</button>
         </p>
       </div>
 
@@ -32,8 +34,7 @@ export const Creativity = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/10"></div>
 
         {/* Content Wrapper */}
-        <div className="relative w-full h-full px-72 mb-40 py-20 text-white space-y-10">
-
+        <div className="relative w-full h-full px-72 mb-40 py-24 text-white space-y-10">
           <h2 className="text-3xl font-semibold">Why Do We EXIST ?</h2>
           <p className="w-full">
             To ensure a complete balance between technology and marketing. We
@@ -47,9 +48,9 @@ export const Creativity = () => {
             accountable. We all do the dirty work. No one in the company sees
             themselves above any task.
           </p>
-          <h2>Prashant Saxena</h2>
-          <span>Found - Banttech.com</span>
-          <span>Wearing Several Hats</span>
+          <h2 className="text-[42px] font-s">Prashant Saxena</h2>
+          <span className="font-bold">Found - Banttech.com</span> <br />
+          <span className="text-sm p-1 px-2 bg-b-1/80 text-yellow-300/80 font-semibold">Wearing Several Hats</span>
         </div>
 
         {/* Buttons Section */}
@@ -83,9 +84,9 @@ export const Creativity = () => {
         </div>
 
         <ul className="flex justify-between items-center px-72 pb-20">
-          {qualities.map((prev,idx) => (
-            <li key={idx}>
-              <h2>{prev.title}</h2>
+          {qualities.map((prev, idx) => (
+            <li key={idx} className="flex">
+              <h2 className="text-[80px] text-b-1 font-bold">{prev.title}</h2>
               <p>{prev.subtitile}</p>
             </li>
           ))}
