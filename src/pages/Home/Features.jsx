@@ -55,7 +55,7 @@ const services = [
 
 export const Features = () => {
   return (
-        <section className="py-16 px-4 max-w-6xl mx-auto text-start">
+        <section className="py-16 px-72  mx-auto text-start bg-white">
         <h2 className="text-3xl font-bold">
           Feature <span className="text-secondary font-s">Services</span>
         </h2>

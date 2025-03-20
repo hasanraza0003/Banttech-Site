@@ -8,6 +8,8 @@ import {MakeIdea } from "./MakeIdea";
 import {Vision } from "./Vision";
 import {BlogSec } from "./BlogSec";
 import {Features } from "./Features";
+import {Partnership } from "./Partnership";
+import {Business } from "./Business";
 
 export const Home = () => {
   return (
@@ -21,6 +23,8 @@ export const Home = () => {
         <Vision />
         <BlogSec />
         <Features />
+        <Business />
+        <Partnership />
     </div>
   );
 };
