@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRightToBracket } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 const blogs = [
   {
@@ -33,13 +33,13 @@ const blogs = [
 
 export const BlogSec = () => {
   return (
-    <section className="bg-white px-80 py-20">
+    <section className="bg-white px-80 py-20 mb-28">
       <div className="container mx-auto text-center">
         <div className="flex justify-between items-center">
                 <div className="text-start px-24">
 
           <h2 className="text-4xl text-b-1 font-bold">
-            Blog - News, Posts & <span className="text-secondary">Guide</span>
+            Blog - News, Posts & <span className="text-secondary font-s">Guide</span>
           </h2>
           <p className="text-b-1 mt-8">
             An easy way to stay tuned with the latest technology, updates and
@@ -47,14 +47,14 @@ export const BlogSec = () => {
           </p>
                 </div>
           <button className="flex justify-center items-center gap-4 mt-6 px-6 py-2 border-2 border-b-2 rounded-full hover:bg-gray-100">
-            VIEW ALL BLOGS <FaRightToBracket />
+            VIEW ALL BLOGS <FaArrowRight />
           </button>
         </div>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-white shadow-lg rounded-lg overflow-hidden"
+              className="bg-white shadow-sm rounded-lg overflow-hidden border border-black/10"
             >
               <img
                 src={blog.image}

@@ -10,6 +10,7 @@ import {BlogSec } from "./BlogSec";
 import {Features } from "./Features";
 import {Partnership } from "./Partnership";
 import {Business } from "./Business";
+import { Testimonials } from "./Testimonials";
 
 export const Home = () => {
   return (
@@ -21,10 +22,11 @@ export const Home = () => {
         <Glance />
         <MakeIdea />
         <Vision />
-        <BlogSec />
         <Features />
+        <Testimonials/>
         <Business />
         <Partnership />
+        <BlogSec />
     </div>
   );
 };

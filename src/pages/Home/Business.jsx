@@ -2,7 +2,7 @@ import { FaCheck } from "react-icons/fa";
 
 export const Business = () => {
   return (
-    <section className="mx-auto pb-28 px-72 font-sans bg-white">
+    <section className="py-28 px-72 font-sans bg-white">
       {/* Heading */}
       <div className="text-start mb-12 px-20">
         <h2 className="text-[38px] font-bold text-b-1 leading-snug">
